@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Орден Программистов</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --text: #f8fafc;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text);
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    p.subtitle {
+      color: #94a3b8;
+      margin-top: 12px;
+      font-size: 1.1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .download-btn {
+      margin-top: auto;
+      display: inline-block;
+      width: 100%;
+      padding: 12px 0;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: opacity 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .download-btn:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .download-btn {
+  display: inline-block;           /* делаем блочным элементом */
+  padding: 10px 20px;              /* отступы внутри кнопки */
+  background-color: #007bff;       /* синий фон */
+  color: white;                    /* белый текст */
+  text-decoration: none;           /* убираем подчёркивание */
+  border-radius: 8px;              /* скругление углов */
+  border: none;                    /* убираем рамку */
+  cursor: pointer;                 /* курсор руки при наведении */
+  transition: background-color 0.3s; /* плавный переход */
+}
+
+.download-btn:hover {
+  background-color: #0056b3;       /* цвет при наведении */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ордены программистов</h1>
+    <p class="subtitle">Нажми «Скачать», чтобы сохранить изображение</p>
+  </header>
+
+  <div class="gallery">
+    <!-- Карточка 1 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec586-02a8-7378-b0b5-bfaa63e1ac31.jpg" alt="Орден программиста на Python" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на Python</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec586-02a8-7378-b0b5-bfaa63e1ac31.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec58e-4876-7ef4-bcf1-33f1fc7c31a2.jpg" alt="Орден программиста на C++" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на C++</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec58e-4876-7ef4-bcf1-33f1fc7c31a2.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec593-1857-73f3-9b4f-98535b4413f9.jpg" alt="Орден программиста на GO" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на GO</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec593-1857-73f3-9b4f-98535b4413f9.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 4 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec593-ba3b-79eb-b72b-5d3633584cbb.jpg" alt="Орден программиста на C#" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на C#</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec593-ba3b-79eb-b72b-5d3633584cbb.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 5 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec596-59aa-7124-b990-ca2c092fbf11.jpg" alt="Орден программиста на Java" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на Java</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec596-59aa-7124-b990-ca2c092fbf11.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 6 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec598-d11d-702c-88aa-f180e4194742.jpg" alt="Орден программиста на JavaScript" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на JavaScript</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec598-d11d-702c-88aa-f180e4194742.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 7 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec59c-1549-7788-8801-4ceb1368c3fa.jpg" alt="Орден программиста на HTML" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на HTML</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec59c-1549-7788-8801-4ceb1368c3fa.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 8 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec59e-dd48-732e-85ce-336ece789831.jpg" alt="Орден программиста на Data" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на Data</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec59e-dd48-732e-85ce-336ece789831.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+
+    <!-- Карточка 9 -->
+    <div class="card">
+      <img src="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec5a0-3e5b-7129-aedc-1aa8a256e113.jpg" alt="Орден программиста на PHP" />
+      <div class="card-content">
+        <h3 class="card-title">Орден программиста на PHP</h3>
+        <a href="https://gigabots-3.cdn.giga.chat/019b01dd-00ca-7c5d-8009-fe5421504af1/019ec5a0-3e5b-7129-aedc-1aa8a256e113.jpg" class="download-btn" download>Скачать</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Найди свой орден. Всё бесплатно.
+  </footer>
+</body>
+</html>
